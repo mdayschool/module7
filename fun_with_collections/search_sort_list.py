@@ -1,6 +1,5 @@
 
 def get_list():
-    print("testtesttest")
     inputs = []
     for i in range(0,3):
         inp = float(input("Input a number between 1 and 50: "))
@@ -17,5 +16,7 @@ def search_list(target):
         return -1
 
 def sort_list():
-    pass
+    ls = get_list()
+    ls.sort()
+    return ls
 

@@ -22,6 +22,6 @@ class SearchTestCase(unittest.TestCase):
 
 class SortTestCase(unittest.TestCase):
     def test_sort_list(self):
-        with patch('builtins.input', side_effect=[12, 25, 42]):
+        with patch('builtins.input', side_effect=[42, 25, 12]):
             self.assertEqual([12, 25, 42], search_sort_list.sort_list())
 
