@@ -11,7 +11,10 @@ def get_list():
     return inputs
 
 def search_list(target):
-    pass
+    try:
+        return get_list().index(target)
+    except ValueError:
+        return -1
 
 def sort_list():
     pass
