@@ -12,3 +12,10 @@ class BasicListTestCase(unittest.TestCase):
             with self.assertRaises(ValueError):
                 search_sort_list.get_list()
 
+class SearchSortTestCase(unittest.TestCase):
+    def test_search_list_present(self):
+        with patch('builtins.input', side_effect=[12, 25, 42]):
+            self.assertEqual(1, search_sort_list.search_list(25))
+    def test_search_list_absent(self):
+        with patch('builtins.input', side_effect=[12, 25, 42]):
+            self.assertEqual(-1, search_sort_list.search_list(34))

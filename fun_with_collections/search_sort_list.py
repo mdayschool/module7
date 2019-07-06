@@ -9,3 +9,10 @@ def get_list():
         else:
             raise ValueError("Input must be between 1 and 50")
     return inputs
+
+def search_list(target):
+    pass
+
+def sort_list():
+    pass
+
