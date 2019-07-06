@@ -1,10 +1,10 @@
 import unittest
 from unittest.mock import patch
-from fun_with_collections import basic_list
+from fun_with_collections import search_sort_list
 
 class BasicListTestCase(unittest.TestCase):
     def test_get_list_below_range(self):
         with patch('builtins.input', side_effect=[-1, 10, 45]):
-            with self.assertRaises(TypeError):
-                basic_list.get_list()
+            with self.assertRaises(ValueError):
+                search_sort_list.get_list()
 
