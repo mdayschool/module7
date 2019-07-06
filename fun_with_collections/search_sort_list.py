@@ -4,7 +4,7 @@ def get_list():
     inputs = []
     for i in range(0,3):
         inp = float(input("Input a number between 1 and 50: "))
-        if inp >= 1:
+        if inp >= 1 and inp <= 50:
             inputs.append(inp)
         else:
             raise ValueError("Input must be between 1 and 50")
