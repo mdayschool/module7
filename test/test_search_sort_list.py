@@ -7,4 +7,8 @@ class BasicListTestCase(unittest.TestCase):
         with patch('builtins.input', side_effect=[-1, 10, 45]):
             with self.assertRaises(ValueError):
                 search_sort_list.get_list()
+    def test_get_list_above_range(self):
+        with patch('builtins.input', side_effect=[1, 10, 55]):
+            with self.assertRaises(ValueError):
+                search_sort_list.get_list()
 
