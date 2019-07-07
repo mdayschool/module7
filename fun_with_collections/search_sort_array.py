@@ -28,4 +28,11 @@ def sort_list():
     return ls
 
 def sort_array():
-    pass
+    """
+    Sorts array - Returns an array becase otherwise
+    it would just be generating garbage.
+    """
+    ls = get_list()
+    ls.sort()
+    arr = array.array('f', ls)
+    return arr

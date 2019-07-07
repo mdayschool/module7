@@ -29,7 +29,7 @@ class SortListTestCase(unittest.TestCase):
 
 class SortArrayTestCase(unittest.TestCase):
     def test_sort_array(self):
-        test_array = array.array('i', [12, 25, 42])
+        test_array = array.array('f', [12, 25, 42])
         with patch('builtins.input', side_effect=[42, 25, 12]):
             self.assertEqual(test_array, search_sort_array.sort_array())
 
